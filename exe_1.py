@@ -5,7 +5,7 @@ def get_instances():
   reservations = client.describe_instances()["Reservations"]
   for reservation in reservations:
     for each in reservation["Instances"]:
-      print " instance-id: {}, instance-name: {}, instatnce-state  {}".format(each["InstanceId"], each["KeyName"], each[""]["Name"])
+      print " instance-id: {}, instance-name: {}, instatnce-state  {}".format(each["InstanceId"], each["KeyName"], each["State"]["Name"])
 
       
 def reboot_machine(id):
